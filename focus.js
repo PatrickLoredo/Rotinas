@@ -28,7 +28,6 @@ class Rotina{
     }
 }
 
-    
 /* ----------------------------- FUNÇÕES ----------------------------- */
 function geraIdRotina(idCampo) {
     let campoId = document.getElementById(idCampo);
@@ -95,7 +94,7 @@ function formataData(data) {
     return `${dia}/${mes}/${ano}`;
 }
 
-function populaRotinasCadastradas(idCampo, tipo) {
+function populaRotinasCadastradas(idCampo) {
     let campo = document.getElementById(idCampo);
     campo.innerHTML = '';
     
@@ -162,8 +161,6 @@ function populaRotinasCadastradas(idCampo, tipo) {
         `;
     });
 }
-
-
 
 function checkRotinaConcluido(idRotina) {
     const data = new Date();
@@ -283,4 +280,9 @@ function resetaDados(idRotina){
             
         }
     });
+}
+
+function limparInputUnico(idInput){
+    let campo = document.getElementById(idInput)
+    campo.value = ''
 }

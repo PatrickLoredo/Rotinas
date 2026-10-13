@@ -37,21 +37,15 @@
 <body id="bodyMain">
     <div class="row container mt-3 text-center m-auto">
         <div class="col-12 col-lg-6 mb-1">
-            <div class="row">
-                <div class="col-12">
-                    <button class="btn btn-sm btn-dark w-100"
-                        onclick="geraIdRotina('idRotinaCadastro');
-                    mostraDataAtual('dataInicioRotinaCadastro');
-                    mostraDataAtual('dataAtualizacaoRotinaCadastro')">
-                        <i class="fa fa-circle-plus"></i>&nbsp;&nbsp;
-                        <span class="uppercase tamanho07">adicionar Rotina</span>
-                    </button>
-                </div>
-            </div>
-
             <div class="row container mt-2 mb-3" id="cadastroRotina">
                 <div class="col-12" >
                     <div class="card">
+                        <div class="card-header bg-dark text-light">
+                            <i class="fa fa-circle-plus"></i>&nbsp;&nbsp;
+                            <span class="uppercase tamanho09">
+                                cadastro de nova rotina
+                            </span>
+                        </div>
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-3 col-lg-3 mb-3">
@@ -79,7 +73,8 @@
                                         <i class="fa fa-save"></i>&nbsp;
                                         <span class="uppercase tamanho07">salvar</span>
                                     </button>
-                                    <button class="btn btn-sm btn-primary">
+                                    <button class="btn btn-sm btn-primary"
+                                    onclick="limparInputUnico('nomeRotinaCadastro')">
                                         <i class="fa fa-broom"></i>&nbsp;
                                         <span class="uppercase tamanho07">limpar</span>
                                     </button>
@@ -91,17 +86,20 @@
             </div>
         </div>
 
-        <div class="col-12 col-lg-6 mb-1">
+        <div class="col-12 col-lg-6 mb-1 mt-lg-2 mt-0">
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-sm btn-primary w-100"
-                    onclick="populaRotinasCadastradas('campoExibeMetasIndividualmente','rotinaTodos')">
-                        <i class="fa fa-eye"></i>&nbsp;&nbsp;
-                        <span class="uppercase tamanho07">Visualizar Rotinas</span>
-                    </button>
+                    <div class="card">
+                        <div class="card-header bg-primary text-light">
+                            <i class="fa fa-list"></i>&nbsp;&nbsp;
+                            <span class="uppercase tamanho09">
+                                rotinas cadastradas
+                            </span>
+                        </div>
+                        <div class="card-body" id="campoExibeMetasIndividualmente"></div>
+                    </div>
                 </div>
             </div>
-            <div class="card-body" id="campoExibeMetasIndividualmente"></div>
         </div>
     </div>
 
