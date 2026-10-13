@@ -1,0 +1,55 @@
+.uppercase,
+.labelFormat,
+#cadastroRotina input{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.tamanho06,
+.labelFormat{
+    font-size: 0.6rem;
+}
+.tamanho07,
+#bodyMain input,
+#cadastroRotina input{
+    font-size: 0.7rem;
+}
+.tamanho08{
+    font-size: 0.8rem;
+}
+.tamanho09{
+    font-size: 0.9rem;
+}
+
+.flexCenter,
+#bodyMain input,
+.labelFormat,
+#cadastroRotina input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cadastroRotina input{
+    text-align: center;
+}
+.labelFormat{
+    margin-bottom: 5px;
+}
+
+.statusRotina{
+    position: relative;
+    top:  10px;
+    z-index: 99;
+    right: 35%;
+    border-radius: 40px;
+    padding: 3px 50px;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: white;
+    font-weight: bold;
+}
+.rotina_Inativo{
+    background-color: darkred;
+}
+.rotina_Ativo{
+    background-color: green;
+}

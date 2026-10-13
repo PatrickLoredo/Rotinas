@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADS - Uninter</title>
+
+    <!--FONTAWESOME-->
+    <script src="https://kit.fontawesome.com/e9987e6d2b.js" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
+        </script>
+
+
+    <!--BOOTSTRAP ICONS-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!--SCROLLREVEAL-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS do projeto -->
+    <link rel="stylesheet" href="focus.css">
+
+</head>
+
+
+<body id="bodyMain">
+    <div class="row container mt-3 text-center m-auto">
+        <div class="col-12 col-lg-6 mb-1">
+            <div class="row">
+                <div class="col-12">
+                    <button class="btn btn-sm btn-dark w-100"
+                        onclick="geraIdRotina('idRotinaCadastro');
+                    mostraDataAtual('dataInicioRotinaCadastro');
+                    mostraDataAtual('dataAtualizacaoRotinaCadastro')">
+                        <i class="fa fa-circle-plus"></i>&nbsp;&nbsp;
+                        <span class="uppercase tamanho07">adicionar Rotina</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="row container mt-2 mb-3" id="cadastroRotina">
+                <div class="col-12" >
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-3 col-lg-3 mb-3">
+                                    <label for="" class="labelFormat">id</label>
+                                    <input type="text" class="form-control" disabled id="idRotinaCadastro">
+                                </div>
+                                <div class="col-9 col-lg-9 mb-3">
+                                    <label for="" class="labelFormat">Nome Rotina</label>
+                                    <input type="text" class="form-control" id="nomeRotinaCadastro">
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="" class="labelFormat">Data inicio</label>
+                                    <input type="date" class="form-control" id="dataInicioRotinaCadastro">
+                                </div>
+                                <div class="col-auto mb-3">
+                                    <label for="" class="labelFormat">Data atualização</label>
+                                    <input type="date" class="form-control" id="dataAtualizacaoRotinaCadastro" disabled>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col flexCenter gap-2">
+                                    <button class="btn btn-sm btn-success" onclick="salvarRotina()">
+                                        <i class="fa fa-save"></i>&nbsp;
+                                        <span class="uppercase tamanho07">salvar</span>
+                                    </button>
+                                    <button class="btn btn-sm btn-primary">
+                                        <i class="fa fa-broom"></i>&nbsp;
+                                        <span class="uppercase tamanho07">limpar</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-lg-6 mb-1">
+            <div class="row">
+                <div class="col">
+                    <button class="btn btn-sm btn-primary w-100"
+                    onclick="populaRotinasCadastradas('campoExibeMetasIndividualmente','rotinaTodos')">
+                        <i class="fa fa-eye"></i>&nbsp;&nbsp;
+                        <span class="uppercase tamanho07">Visualizar Rotinas</span>
+                    </button>
+                </div>
+            </div>
+            <div class="card-body" id="campoExibeMetasIndividualmente"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--BOOTSTRAP-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script> AOS.init({ duration: 1200, once: true });</script>
+
+    <!--SHEETJS - LEITURA E CRIAÇÃO DE JS-->
+    <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+    <script src="focus.js"></script>
+</body>
+
+</html>
